@@ -9,8 +9,9 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <div className="logo-icon">
-                <i className="fas fa-yarn"></i>
+              <div className="logo-image">
+  <img src="/logo.png" alt="Loops and Laurels" />
+</div>
               </div>
               <div className="logo-text">
                 <span>Loops and Laurels</span>
