@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://loops-and-laurels.vercel.app/sitemap.xml
+
+# Allow all crawlers for SEO
+Disallow:
+
+# Happy crawling!
