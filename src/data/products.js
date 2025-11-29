@@ -58,26 +58,6 @@ export const products = [
     category: "home",
     featured: true,
     inStock: true
-  },
-  {
-    id: 7,
-    name: "Baby Crochet Booties",
-    price: 599,
-    image: "https://images.unsplash.com/photo-1599599810763-9c1678e6e4f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80",
-    description: "Adorable handmade booties for babies. Soft and comfortable for delicate feet.",
-    category: "baby",
-    featured: false,
-    inStock: true
-  },
-  {
-    id: 8,
-    name: "Crochet Plant Hanger",
-    price: 649,
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=958&q=80",
-    description: "Beautiful macrame-style plant hanger to display your favorite plants elegantly.",
-    category: "home",
-    featured: false,
-    inStock: true
   }
 ];
 
@@ -85,6 +65,5 @@ export const categories = [
   { id: 'all', name: 'All Products' },
   { id: 'home', name: 'Home Decor' },
   { id: 'accessories', name: 'Accessories' },
-  { id: 'toys', name: 'Amigurumi Toys' },
-  { id: 'baby', name: 'Baby Items' }
+  { id: 'toys', name: 'Amigurumi Toys' }
 ];
