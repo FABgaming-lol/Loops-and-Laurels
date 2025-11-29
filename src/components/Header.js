@@ -34,8 +34,8 @@ const Header = () => {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <div className="logo-icon">
-              <i className="fas fa-yarn"></i>
+            <div className="logo-image">
+  <img src="/logo.png" alt="Loops and Laurels" />
             </div>
             <div className="logo-text">
               <span>Loops and Laurels</span>
