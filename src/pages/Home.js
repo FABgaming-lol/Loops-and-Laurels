@@ -141,40 +141,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Craftsmanship Section */}
-      <section className="craftsmanship section-padding">
-        <div className="container">
-          <div className="craftsmanship-content">
-            <div className="craftsmanship-text fade-in">
-              <h2>Artistry in Every Stitch</h2>
-              <p>
-                Every Loops and Laurels product is meticulously handmade with premium materials. 
-                We believe in sustainable crafting practices and creating heirloom-quality pieces 
-                that last for generations.
-              </p>
-              <div className="craftsmanship-features">
-                <div className="feature">
-                  <i className="fas fa-hand-sparkles"></i>
-                  <span>100% Handmade</span>
-                </div>
-                <div className="feature">
-                  <i className="fas fa-leaf"></i>
-                  <span>Eco-Friendly Materials</span>
-                </div>
-                <div className="feature">
-                  <i className="fas fa-award"></i>
-                  <span>Premium Quality</span>
-                </div>
-                <div className="feature">
-                  <i className="fas fa-shipping-fast"></i>
-                  <span>Free Shipping</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
