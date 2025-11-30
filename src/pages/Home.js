@@ -105,9 +105,9 @@ const Home = () => {
             </div>
             <div className="about-image slide-in-right">
               <img 
-                src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Crochet Artistry" 
-              />
+  src="/logo.png" 
+  alt="Loops and Laurels Logo" 
+/>
             </div>
           </div>
         </div>
