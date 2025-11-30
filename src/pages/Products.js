@@ -34,46 +34,57 @@ const Products = () => {
 
   return (
     <div className="products-page" ref={sectionRef}>
-      <div className="page-header">
-        <div className="container">
-          <h1>Our Collection</h1>
-          <p>Discover our handmade crochet creations, each piece crafted with love and attention to detail.</p>
-        </div>
+      
+      {/* Header */}
+      <div className="products-header fade-in-up">
+        <h1>Our Collection</h1>
+        <p>
+          Explore beautiful handmade crochet pieces crafted with love, patience, 
+          and passion — from cozy accessories to adorable plush creations.
+        </p>
       </div>
 
-      <section className="products-section section-padding">
-        <div className="container">
-          <div className="products-filters fade-in">
-            {categories.map(category => (
-              <button
-                key={category.id}
-                className={`filter-btn ${selectedCategory === category.id ? 'active' : ''}`}
-                onClick={() => setSelectedCategory(category.id)}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
+      {/* Filter Buttons */}
+      <div className="products-filters fade-in-up">
+        <button
+          className={`filter-btn ${selectedCategory === 'all' ? 'active' : ''}`}
+          onClick={() => setSelectedCategory('all')}
+        >
+          All
+        </button>
+        {categories.map(category => (
+          <button
+            key={category.id}
+            className={`filter-btn ${selectedCategory === category.id ? 'active' : ''}`}
+            onClick={() => setSelectedCategory(category.id)}
+          >
+            {category.name}
+          </button>
+        ))}
+      </div>
 
-          <div className="products-grid">
-            {filteredProducts.map((product, index) => (
-              <ProductCard 
-                key={product.id} 
-                product={product}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              />
-            ))}
-          </div>
+      {/* Product Grid */}
+      <div className="products-grid fade-in-up">
+        {filteredProducts.map((product, index) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            style={{ animationDelay: `${index * 0.1}s` }}
+          />
+        ))}
+      </div>
 
-          {filteredProducts.length === 0 && (
-            <div className="no-products fade-in">
-              <i className="fas fa-search"></i>
-              <h3>No products found</h3>
-              <p>We're constantly adding new items to our collection. Please check back soon!</p>
-            </div>
-          )}
+      {/* No Products Found */}
+      {filteredProducts.length === 0 && (
+        <div className="no-products fade-in-up">
+          <i className="fas fa-search"></i>
+          <h3>No products found</h3>
+          <p>
+            We are always adding new delightful creations — check back soon! 🧶✨
+          </p>
         </div>
-      </section>
+      )}
+
     </div>
   );
 };
