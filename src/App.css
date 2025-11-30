@@ -1,3 +1,26 @@
+/* Global Craft-Themed Variables */
+:root {
+  --primary: #c49a6c; /* Yarn-inspired warm brown */
+  --secondary: #f8f3ed; /* Soft cream background */
+  --accent: #e7d5c3; /* Soft beige highlight */
+  --dark: #3b3026; /* Warm dark */
+  --light: #ffffff;
+  --text: #4d463f; /* Soft readable text */
+
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease-in-out;
+}
+
+/* Global Body Style */
+body {
+  background: var(--secondary);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main App */
 .App {
   min-height: 100vh;
   display: flex;
@@ -8,12 +31,27 @@ main {
   flex: 1;
 }
 
-/* Smooth scrolling */
+/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Loading animation */
+/* Global Page Layout */
+.page-container {
+  min-height: 100vh;
+  padding: 100px 20px 60px;
+  background: var(--secondary);
+}
+
+.page-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+/* Fade + Slide Animation for Page Elements */
 @keyframes fadeInUp {
   from {
     opacity: 0;
