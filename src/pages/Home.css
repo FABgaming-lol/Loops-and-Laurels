@@ -2,6 +2,10 @@
   overflow-x: hidden;
 }
 
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+
 .hero {
   height: 100vh;
   display: flex;
@@ -9,7 +13,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--secondary) 0%, var(--light) 100%);
+  background: var(--secondary);
 }
 
 .hero-background {
@@ -18,8 +22,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('https://images.unsplash.com/photo-1618359057154-e21ae64350b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
-  opacity: 0.5;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url('https://images.unsplash.com/photo-1618359057154-e21ae64350b6?auto=format&fit=crop&w=2070&q=80')
+      center/cover no-repeat;
+  filter: brightness(0.92);
 }
 
 .hero-content {
@@ -32,28 +41,29 @@
 .hero-title {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
-  color: var(--dark);
-  line-height: 1.2;
+  color: var(--light);
+  font-weight: 700;
+  text-shadow: 0px 4px 18px rgba(0,0,0,0.3);
 }
 
 .hero-title span {
-  color: var(--primary);
   background: linear-gradient(135deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   margin-bottom: 2.5rem;
-  color: var(--text);
+  color: var(--light);
+  opacity: 0.95;
   line-height: 1.6;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Hero Buttons */
 .hero-actions {
   display: flex;
   gap: 20px;
@@ -61,6 +71,33 @@
   flex-wrap: wrap;
 }
 
+.btn {
+  background: var(--primary);
+  color: var(--light);
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--dark);
+  transform: translateY(-4px);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--light);
+}
+
+.btn-secondary:hover {
+  background: var(--light);
+  color: var(--dark);
+}
+
+/* Scroll Arrow */
 .hero-scroll-indicator {
   position: absolute;
   bottom: 30px;
@@ -86,6 +123,10 @@
   }
 }
 
+/* ============================= */
+/* FEATURED PRODUCTS */
+/* ============================= */
+
 .featured-products {
   background: var(--secondary);
 }
@@ -96,6 +137,10 @@
   gap: 30px;
   margin-top: 50px;
 }
+
+/* ============================= */
+/* ABOUT PREVIEW */
+/* ============================= */
 
 .about-preview {
   background: var(--light);
@@ -137,6 +182,10 @@
   transform: scale(1.05);
 }
 
+/* ============================= */
+/* UPI SECTION */
+/* ============================= */
+
 .upi-section {
   background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
   color: white;
@@ -145,10 +194,6 @@
 
 .upi-section .section-title {
   color: white;
-}
-
-.upi-section .section-title:after {
-  background-color: var(--accent);
 }
 
 .upi-description {
@@ -196,29 +241,20 @@
   font-size: 1.1rem;
 }
 
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
-  
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-  
+
   .about-content {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
-  .about-text h2 {
-    font-size: 2rem;
-  }
-  
+
   .upi-icons {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -229,7 +265,7 @@
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .upi-icons {
     grid-template-columns: 1fr;
   }
